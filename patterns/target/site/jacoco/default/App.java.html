@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>App.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">patterns</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">App.java</span></div><h1>App.java</h1><pre class="source lang-java linenums">import java.util.ArrayList;
+import java.util.List;
+
+import composite.LoteProducto;
+import composite.Producto;
+import composite.ProductoPadre;
+import dependecy_injection.Game;
+import dependecy_injection.Playstation;
+import factoria.CaballeroFactoria;
+import factoria.Cisne;
+import factoria.Fenix;
+import factoria.Pegaso;
+
+
+
+<span class="nc" id="L16">public class App {</span>
+    public static void main(String[] args) {
+<span class="nc" id="L18">        final String patron=&quot;DEPENDENCY&quot;;</span>
+        
+<span class="nc bnc" id="L20" title="All 4 branches missed.">        switch (patron){</span>
+            case &quot;FACTORIA&quot;:
+
+<span class="nc" id="L23">                List&lt;CaballeroFactoria&gt; caballeros = new ArrayList&lt;CaballeroFactoria&gt;();</span>
+<span class="nc" id="L24">                Cisne caballero1=new Cisne();</span>
+<span class="nc" id="L25">                Pegaso caballero2=new Pegaso(); </span>
+<span class="nc" id="L26">                Fenix caballero3=new Fenix();</span>
+                
+<span class="nc" id="L28">                caballeros.add(caballero1); caballeros.add(caballero2);</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">                caballeros.add(caballero3); for(CaballeroFactoria caballero: caballeros) {</span>
+<span class="nc" id="L30">                caballero.animal(); }</span>
+<span class="nc" id="L31">            break;</span>
+            
+            case &quot;COMPOSITE&quot;:
+                
+<span class="nc" id="L35">                List&lt;ProductoPadre&gt; deposito=new ArrayList&lt;ProductoPadre&gt;();</span>
+<span class="nc" id="L36">                List&lt;Producto&gt; loteCafe=new ArrayList&lt;Producto&gt;();</span>
+                               
+<span class="nc" id="L38">                Producto cafe1=new Producto(&quot;Cafe La Morenita&quot;,100,200.25,&quot;CM001&quot;); </span>
+<span class="nc" id="L39">                Producto cafe2=new Producto(&quot;Cafe La Morenita&quot;,100,200.25,&quot;CM002&quot;); </span>
+<span class="nc" id="L40">                Producto cafe3=new Producto(&quot;Cafe La Morenita&quot;,100,200.25,&quot;CM003&quot;); </span>
+<span class="nc" id="L41">                Producto cafe4=new Producto(&quot;Cafe La Morenita&quot;,100,200.25,&quot;CM004&quot;);</span>
+<span class="nc" id="L42">                Producto cafe5=new Producto(&quot;Cafe La Morenita&quot;,100,200.25,&quot;CM005&quot;);</span>
+                
+<span class="nc" id="L44">                loteCafe.add(cafe1); loteCafe.add(cafe2); loteCafe.add(cafe3);</span>
+<span class="nc" id="L45">                loteCafe.add(cafe4); loteCafe.add(cafe5);</span>
+                
+<span class="nc" id="L47">                LoteProducto cafe=new LoteProducto(loteCafe);                </span>
+<span class="nc" id="L48">                Producto leche1=new Producto(&quot;Leche la Serenisima&quot;, 500,250.35,&quot;LS005&quot;);</span>
+                
+<span class="nc" id="L50">                deposito.add(leche1); deposito.add(cafe);</span>
+                
+<span class="nc" id="L52">                deposito.stream().forEach(producto -&gt; producto.imprimirProducto());</span>
+<span class="nc" id="L53">            break;</span>
+           
+            case &quot;DEPENDENCY&quot;:
+                
+<span class="nc" id="L57">                Playstation play= new Playstation(new Game(&quot;Resident Evil&quot;));</span>
+<span class="nc" id="L58">                System.out.println(play.askMyGame());</span>
+                
+<span class="nc" id="L60">                play.setVideogame(new Game(&quot;Brawhalla&quot;));</span>
+<span class="nc" id="L61">                System.out.println(play.askMyGame());</span>
+                
+<span class="nc" id="L63">                play.setVideogame(new Game(null));</span>
+<span class="nc" id="L64">                System.out.println(play.askMyGame());</span>
+                
+        }
+
+          
+         
+        
+ 
+          
+          
+         
+          
+        
+        
+          
+          
+         
+ 
+<span class="nc" id="L82">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

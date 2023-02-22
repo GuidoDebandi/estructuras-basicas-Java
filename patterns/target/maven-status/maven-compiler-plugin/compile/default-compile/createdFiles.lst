@@ -1,0 +1,17 @@
+observer\publisher\EventManager.class
+dependecy_injection\Playstation.class
+dependecy_injection\Game.class
+App.class
+model\Order.class
+composite\Producto.class
+factoria\Cisne.class
+observer\suscribers\Follower.class
+model\Currency.class
+model\Product.class
+composite\LoteProducto.class
+observer\publisher\ContentCreator.class
+composite\OperacionProducto.class
+composite\ProductoPadre.class
+factoria\CaballeroFactoria.class
+factoria\Pegaso.class
+factoria\Fenix.class

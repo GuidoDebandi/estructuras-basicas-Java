@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Producto.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">patterns</a> &gt; <a href="index.source.html" class="el_package">composite</a> &gt; <span class="el_source">Producto.java</span></div><h1>Producto.java</h1><pre class="source lang-java linenums">package composite;
+
+public class Producto extends ProductoPadre implements OperacionProducto{
+    
+    private String name;
+    private int stock;
+    private double precio;
+    private String codigo;
+    
+
+    public Producto(String name, int stock, double precio,String codigo) {
+<span class="nc" id="L12">        super();</span>
+<span class="nc" id="L13">        this.name = name;</span>
+<span class="nc" id="L14">        this.stock = stock;</span>
+<span class="nc" id="L15">        this.precio = precio;</span>
+<span class="nc" id="L16">        this.codigo= codigo;</span>
+<span class="nc" id="L17">    }</span>
+
+    public Producto() {
+<span class="nc" id="L20">        super();</span>
+<span class="nc" id="L21">    }</span>
+
+    public String getName() {
+<span class="nc" id="L24">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="nc" id="L28">        this.name = name;</span>
+<span class="nc" id="L29">    }</span>
+
+    public int getStock() {
+<span class="nc" id="L32">        return stock;</span>
+    }
+
+    public void setStock(int stock) {
+<span class="nc" id="L36">        this.stock = stock;</span>
+<span class="nc" id="L37">    }</span>
+
+    public double getPrecio() {
+<span class="nc" id="L40">        return precio;</span>
+    }
+
+    public void setPrecio(double precio) {
+<span class="nc" id="L44">        this.precio = precio;</span>
+<span class="nc" id="L45">    }</span>
+    
+
+    @Override
+    public void imprimirProducto() {
+<span class="nc" id="L50">      System.out.println( this.toString());</span>
+<span class="nc" id="L51">    }</span>
+
+    public String getCodigo() {
+<span class="nc" id="L54">        return codigo;</span>
+    }
+
+    public void setCodigo(String codigo) {
+<span class="nc" id="L58">        this.codigo = codigo;</span>
+<span class="nc" id="L59">    }</span>
+
+    @Override
+    public String toString() {
+<span class="nc" id="L63">        return    &quot;nombre producto: &quot;+this.name+&quot;\n&quot;</span>
+                + &quot;stock: &quot;+this.stock+&quot;\n&quot;
+                + &quot;precio: &quot;+this.precio+&quot;\n&quot;
+                + &quot;codigo: &quot;+this.codigo+&quot;\n&quot;;
+                
+    }
+    
+    
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

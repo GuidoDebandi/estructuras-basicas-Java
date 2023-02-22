@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Playstation.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">patterns</a> &gt; <a href="index.source.html" class="el_package">dependecy_injection</a> &gt; <span class="el_source">Playstation.java</span></div><h1>Playstation.java</h1><pre class="source lang-java linenums">package dependecy_injection;
+
+public class Playstation {
+   private Game videogame;
+
+public Playstation(Game videogame) {
+<span class="nc" id="L7">    super();</span>
+<span class="nc" id="L8">    this.videogame = videogame;</span>
+<span class="nc" id="L9">}</span>
+
+public Game getVideogame() {
+<span class="nc" id="L12">    return videogame;</span>
+}
+
+public void setVideogame(Game videogame) {
+<span class="nc" id="L16">    this.videogame = videogame;</span>
+<span class="nc" id="L17">}</span>
+   
+   public String askMyGame() {
+<span class="nc bnc" id="L20" title="All 2 branches missed.">       if(this.getVideogame()==null)return (&quot;�Estoy vac�o!&quot;);</span>
+<span class="nc" id="L21">       return (&quot;El juego que estoy corriendo es: &quot;+ this.getVideogame().getTittle());</span>
+   }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

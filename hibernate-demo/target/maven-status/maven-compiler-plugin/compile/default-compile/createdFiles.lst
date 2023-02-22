@@ -1,0 +1,4 @@
+com\globallogic\bootcamp\hibernate\example\dao\AlumnoDao.class
+com\globallogic\bootcamp\hibernate\example\entity\Alumno.class
+com\globallogic\bootcamp\hibernate\example\ExampleApplication.class
+com\globallogic\bootcamp\hibernate\example\config\HibernateConfig.class

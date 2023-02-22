@@ -1,0 +1,6 @@
+spring\coverage\example\Application.class
+spring\coverage\example\model\Example$ExampleBuilder.class
+spring\coverage\example\service\ExampleService.class
+spring\coverage\example\service\impl\ExampleServiceImpl.class
+spring\coverage\example\model\Example.class
+spring\coverage\example\controller\ExampleController.class

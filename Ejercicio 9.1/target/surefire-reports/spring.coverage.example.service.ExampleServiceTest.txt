@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: spring.coverage.example.service.ExampleServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.726 s - in spring.coverage.example.service.ExampleServiceTest

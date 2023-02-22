@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Loteria.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">coverage.loteria</a> &gt; <a href="index.source.html" class="el_package">coverage.loteria</a> &gt; <span class="el_source">Loteria.java</span></div><h1>Loteria.java</h1><pre class="source lang-java linenums">package coverage.loteria;
+
+import config.Generated;
+import coverage.loteria.model.CartonGenerator;
+
+public class Loteria {
+	private float pozo;
+	private int boletos;
+	private int ganadores;
+	private CartonGenerator cartonGenerator;
+	
+	
+<span class="fc" id="L13">	public Loteria(float pozo, int boletos, CartonGenerator cartonGenerator) {</span>
+<span class="fc" id="L14">		this.pozo = pozo;</span>
+<span class="fc" id="L15">		this.boletos = boletos;</span>
+<span class="fc" id="L16">		this.cartonGenerator = cartonGenerator;</span>
+<span class="fc" id="L17">		this.ganadores = 0;</span>
+<span class="fc" id="L18">	}</span>
+
+	@Generated
+	public float getPozo() {
+		return pozo;
+	}
+	
+	@Generated
+	public int getBoletos() {
+		return boletos;
+	}
+	
+	@Generated
+	public int getGanadores() {
+		return ganadores;
+	}
+	
+	
+
+	public void jugada()
+	{
+<span class="fc bfc" id="L39" title="All 2 branches covered.">		for(int i=0;i&lt;boletos;i++)</span>
+		{
+<span class="fc bfc" id="L41" title="All 2 branches covered.">			if(cartonGenerator.isGanador()) {</span>
+<span class="fc" id="L42">				this.ganadores++;</span>
+			}
+		}
+<span class="fc" id="L45">	}</span>
+	
+	public boolean hayGanadorUnico()
+	{
+<span class="fc bfc" id="L49" title="All 2 branches covered.">		if(this.getGanadores() == 1)</span>
+<span class="fc" id="L50">			return true;</span>
+		else 
+<span class="fc" id="L52">			return false;</span>
+	}
+	
+	public boolean hayCuadrupleGanador()
+	{
+<span class="fc bfc" id="L57" title="All 2 branches covered.">		if(this.getGanadores() == 4)</span>
+<span class="fc" id="L58">			return true;</span>
+		else 
+<span class="fc" id="L60">			return false;</span>
+	}			
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

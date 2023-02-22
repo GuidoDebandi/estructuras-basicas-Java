@@ -1,0 +1,4 @@
+coverage\example\Application.class
+coverage\example\model\Galaxy.class
+coverage\example\model\Planet.class
+coverage\example\model\Star.class
